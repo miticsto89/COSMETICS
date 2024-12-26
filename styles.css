@@ -29,17 +29,31 @@ section {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    animation: fadeIn 1s ease-in;
 }
 
 .item img {
     max-width: 100px;
     margin-right: 20px;
     border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.item img:hover {
+    transform: scale(1.2);
 }
 
 .item-info {
     display: flex;
     flex-direction: column;
+}
+
+.item-info h3 {
+    transition: color 0.3s ease;
+}
+
+.item-info h3:hover {
+    color: #4CAF50;
 }
 
 footer {
@@ -50,4 +64,9 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
